@@ -36,7 +36,7 @@ deploy:
 notifications:
   email:
     recipients:
-      - piyush@piyushverma.net
+      - github@piyushverma.net
 
 
 branches:
