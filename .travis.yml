@@ -18,12 +18,12 @@ script:
 
 after_success:
   - mkdir -p $HOME/output/{linux,darwin}
-  - GOOS=linux GOARCH=amd64 go build -v --race -o $HOME/output/linux/plusger github.com/meson10/plusher
+  - GOOS=linux GOARCH=amd64 go build -v --race -o $HOME/output/linux/plusher github.com/meson10/plusher
   - GOOS=darwin GOARCH=amd64 go build -v --race -o $HOME/output/darwin/plusher github.com/meson10/plusher
 
 deploy:
   - provider: bintray
-    file: plusher/`$HOME/output/linux/plusher version`/plusher
+    file: $HOME/output/linux/plusher
     user: meson10
     key: "$BINTRAY_API_KEY"
     on:
