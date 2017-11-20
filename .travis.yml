@@ -22,10 +22,14 @@ after_success:
   - GOOS=darwin GOARCH=amd64 go build -v --race -o $HOME/output/darwin/plusher github.com/meson10/plusher
 
 deploy:
-  - provider: bintray
-    file: "bintray.json"
-    user: "meson10"
-    key: "$BINTRAY_API_KEY"
+  - provider: s3
+    access_key_id: "$UPLOAD_ACCESS_KEY"
+    secret_access_key: "$UPLOAD_SECRET_KEY"
+    bucket: "$UPLOAD_BUCKET_NAME"
+    region: "$UPLOAD_BUCKET_REGION"
+    skip_cleanup: true
+    local_dir: $HOME/output
+    upload-dir: plusher/`$HOME/output/linux/plusher version`
     on:
       branch: master
 
