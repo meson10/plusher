@@ -23,8 +23,8 @@ after_success:
 
 deploy:
   - provider: bintray
-    file: $HOME/output/linux/plusher
-    user: meson10
+    file: "bintray.json"
+    user: "meson10"
     key: "$BINTRAY_API_KEY"
     on:
       branch: master
