@@ -1,0 +1,68 @@
+hash: a8f4a8408943e905d3d7d04831dbd3400059b4a9b1c6ce03107117591bd7cc4b
+updated: 2017-11-20T18:20:52.006588158+05:30
+imports:
+- name: github.com/fatih/structs
+  version: a720dfa8df582c51dee1b36feabb906bde1588bd
+- name: github.com/gobuffalo/plush
+  version: 07945e716c6e71b7faa5f63b8c433cae4612514f
+  subpackages:
+  - ast
+  - lexer
+  - parser
+  - token
+- name: github.com/gobuffalo/tags
+  version: 6755de03970f68812cfb0cb1162a66e60bcc1106
+  subpackages:
+  - form
+  - form/bootstrap
+- name: github.com/inconshreveable/mousetrap
+  version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
+- name: github.com/markbates/going
+  version: 0576708c56cea02331f864fe6e157ac7841923e4
+  subpackages:
+  - defaults
+  - wait
+- name: github.com/markbates/inflect
+  version: b32533d044574b17faf5615eefb6c912e2099bd4
+- name: github.com/markbates/validate
+  version: cd8cc34c703420d6b084fbbfd5085e8e71c5b830
+  subpackages:
+  - validators
+- name: github.com/microcosm-cc/bluemonday
+  version: 68fecaef60268522d2ac3f0123cec9d3bcab7b6e
+- name: github.com/pkg/errors
+  version: 645ef00459ed84a119197bfb8d8205042c6df63d
+- name: github.com/russross/blackfriday
+  version: 6d1ef893fcb01b4f50cb6e57ed7df3e2e627b6b2
+- name: github.com/satori/go.uuid
+  version: 879c5887cd475cd7864858769793b2ceb0d44feb
+- name: github.com/serenize/snaker
+  version: c7a77c38c398a5468cac9579c3b2b1de22fb4da6
+- name: github.com/sergi/go-diff
+  version: 1744e2970ca51c86172c8190fadad617561ed6e7
+  subpackages:
+  - diffmatchpatch
+- name: github.com/shurcooL/github_flavored_markdown
+  version: 8071c74461cb0a1a6e8a677e868cbb79138510c9
+- name: github.com/shurcooL/highlight_diff
+  version: 09bb4053de1b1d872a9f25dc21378fa71dca4e4e
+- name: github.com/shurcooL/highlight_go
+  version: 78fb10f4a5f89e812a5e26ab723b954a51226086
+- name: github.com/shurcooL/octiconssvg
+  version: 8c9861b86a08c72d14e0285d0dc313bb6df52295
+- name: github.com/shurcooL/sanitized_anchor_name
+  version: 86672fcb3f950f35f2e675df2240550f2a50762f
+- name: github.com/sourcegraph/annotate
+  version: f4cad6c6324d3f584e1743d8b3e0e017a5f3a636
+- name: github.com/sourcegraph/syntaxhighlight
+  version: bd320f5d308e1a3c4314c678d8227a0d72574ae7
+- name: github.com/spf13/cobra
+  version: b3426bbac13d7110c4d8fce456ea0012f79f3b8b
+- name: github.com/spf13/pflag
+  version: 97afa5e7ca8a08a383cb259e06636b5e2cc7897f
+- name: golang.org/x/net
+  version: 4a1c855a052c2bad0e019ccfe8193a33d77adf5e
+  subpackages:
+  - html
+  - html/atom
+testImports: []

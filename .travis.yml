@@ -1,0 +1,44 @@
+language: go
+
+go:
+  - 1.9.x
+
+before_install:
+  - wget "https://github.com/Masterminds/glide/releases/download/0.10.2/glide-0.10.2-linux-amd64.tar.gz"
+  - tar -vxz -C $HOME/bin --strip=1 -f glide-0.10.2-linux-amd64.tar.gz
+  - sudo apt-get install unzip -y
+  - export PATH="$HOME/bin:$PATH"
+
+install:
+  - glide install
+
+script:
+  - go test -v --race github.com/meson10/plusher/...
+
+
+after_success:
+  - mkdir -p $HOME/output/{linux,darwin}
+  - GOOS=linux GOARCH=amd64 go build -v --race -o $HOME/output/linux/plusger github.com/meson10/plusher
+  - GOOS=darwin GOARCH=amd64 go build -v --race -o $HOME/output/darwin/plusher github.com/meson10/plusher
+
+deploy:
+  - provider: bintray
+    file: plusher/`$HOME/output/linux/plusher version`/plusher
+    user: meson10
+    key: "$BINTRAY_API_KEY"
+    on:
+      branch: master
+
+notifications:
+  email:
+    recipients:
+      - piyush@piyushverma.net
+
+
+branches:
+  only:
+    - master
+    - staging
+    - qa
+    - console
+    - prod
